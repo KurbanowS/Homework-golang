@@ -33,4 +33,30 @@ func main() {
 		}
 	}
 	fmt.Println("the lowest value is:", min)
+
+	var T, N, K, Time int
+	fmt.Println("How much tests: ")
+	fmt.Scan(&T)
+
+	fmt.Println("How much students: ")
+	fmt.Scan(&N)
+
+	fmt.Println("How much students we need: ")
+	fmt.Scan(&K)
+	for i := 1; i <= T; i++ {
+		ComeEarly := 0
+		for j := 1; j <= N; j++ {
+			fmt.Println("When came student №", j)
+			fmt.Scan(&Time)
+			if Time <= 0 {
+				ComeEarly++
+			}
+		}
+		if ComeEarly >= K {
+			fmt.Println("YES")
+		} else {
+			fmt.Println("NO")
+		}
+	}
+
 }
